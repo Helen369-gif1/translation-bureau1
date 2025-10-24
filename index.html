@@ -1,35 +1,234 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Бюро переводов</title>
+  <title>Бюро перекладів «LinguaPro»</title>
+  <meta name="description" content="LinguaPro — професійне бюро перекладів: письмові та усні переклади, редагування, нотаріальне засвідчення. Швидко, точно, професійно.">
+
+  <!-- Preconnect for faster font load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f7f7f7;
-      color: #333;
-      margin: 0;
-      padding: 40px;
+    :root{
+      --primary:#0052cc;
+      --primary-dark:#003d99;
+      --bg:#f0f4ff;
+      --content-max-width:900px;
+      --radius:16px;
     }
-    h1 { color: #2a7ae2; }
-    .card {
+
+    *{box-sizing:border-box}
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #222;
+      background: linear-gradient(to bottom right, var(--bg), #ffffff);
+      background-attachment: fixed;
+    }
+
+    /* Skip link for keyboard users */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      background: #000;
+      color: #fff;
+      padding: 8px;
+      z-index: 1000;
+    }
+    .skip-link:focus-visible {
+      left: 16px;
+      top: 16px;
+      width: auto;
+      height: auto;
+      border-radius: 6px;
+    }
+
+    header {
+      background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1500&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 60px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.45);
+      pointer-events: none; /* allow clicks through the overlay */
+    }
+
+    header * {
+      position: relative;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    nav {
+      margin-top: 18px;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.95);
+      text-decoration: none;
+      margin: 0 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: rgba(0,0,0,0.15);
+      font-weight: 600;
+    }
+
+    main {
+      max-width: var(--content-max-width);
+      margin: -40px auto 40px;
+      padding: 24px;
+    }
+
+    section {
+      padding: 40px 20px;
       background: white;
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: var(--radius);
+      margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      text-align: left;
+      display: inline-block;
       margin: 0 auto;
-      width: 300px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding-left: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 12px 26px;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-weight: 600;
+      transition: background-color 0.3s, transform 0.12s;
+      outline: none;
+    }
+
+    .button:hover {
+      background-color: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    /* Accessible focus style for keyboard users */
+    .button:focus-visible {
+      box-shadow: 0 0 0 4px rgba(0,82,204,0.18);
+    }
+
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      section {
+        padding: 20px 12px;
+      }
+      main {
+        margin-top: -24px;
+        padding: 12px;
+      }
+      nav a{
+        display:inline-block;
+        margin:6px 6px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <h1>Бюро переводов “Лингва”</h1>
-    <p>Переводы с английского, немецкого и французского языков.</p>
-    <p>📞 +7 (999) 123-45-67</p>
-    <p>✉️ info@lingva.ru</p>
-  </div>
+
+  <a class="skip-link" href="#main">Пропустити до вмісту</a>
+
+  <header role="banner" aria-label="Верхній банер сайту">
+    <h1>Бюро перекладів «LinguaPro»</h1>
+    <p>Мости між мовами та культурами — швидко, точно, професійно</p>
+
+    <nav aria-label="Головна навігація">
+      <a href="#about">Про нас</a>
+      <a href="#services">Послуги</a>
+      <a href="#contacts">Контакти</a>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Про нас</h2>
+      <p>Ми — команда професійних перекладачів із досвідом роботи понад 10 років. 
+         Забезпечуємо якісний переклад документів, сайтів, технічних текстів і комерційних матеріалів. 
+         Нам довіряють бізнеси, стартапи та приватні клієнти по всій Європі.</p>
+    </section>
+
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Наші послуги</h2>
+      <ul>
+        <li>Письмові переклади документів та текстів</li>
+        <li>Усний переклад на зустрічах і конференціях</li>
+        <li>Редагування та коректура перекладів</li>
+        <li>Нотаріальне засвідчення</li>
+      </ul>
+    </section>
+
+    <section id="contacts" aria-labelledby="contacts-heading">
+      <h2 id="contacts-heading">Контакти</h2>
+      <p>📞 <a href="tel:+380671234567" aria-label="Телефон компанії">+38 (067) 123 45 67</a></p>
+      <p>✉️ <a href="mailto:linguapro.office@gmail.com">linguapro.office@gmail.com</a></p>
+
+      <a href="mailto:linguapro.office@gmail.com" class="button" aria-label="Написати нам електронною поштою">Написати нам</a>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <p>© <span id="year">2025</span> Бюро перекладів «LinguaPro». Усі права захищено.</p>
+  </footer>
+
+  <script>
+    // Динамический год в footer
+    (function(){
+      var y = new Date().getFullYear();
+      var el = document.getElementById('year');
+      if(el) el.textContent = y;
+    })();
+  </script>
+
 </body>
 </html>
