@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Бюро перекладів «LinguaPro»</title>
-  <meta name="description" content="LinguaPro — професійне бюро перекладів: письмові та усні переклади, редагування, нотаріальне засвідчення. Швидко, точно, професійно.">
+  <title>GTI Labz — Бюро перекладів</title>
+  <meta name="description" content="GTI Labz — сучасне бюро перекладів, що поєднує штучний інтелект та професійний підхід людини. Точність, швидкість, культурна адаптація.">
 
-  <!-- Preconnect for faster font load -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -28,28 +27,6 @@
       padding: 0;
       color: #222;
       background: linear-gradient(to bottom right, var(--bg), #ffffff);
-      background-attachment: fixed;
-    }
-
-    /* Skip link for keyboard users */
-    .skip-link {
-      position: absolute;
-      left: -999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      z-index: 1000;
-    }
-    .skip-link:focus-visible {
-      left: 16px;
-      top: 16px;
-      width: auto;
-      height: auto;
-      border-radius: 6px;
     }
 
     header {
@@ -66,33 +43,18 @@
       content: "";
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.45);
-      pointer-events: none; /* allow clicks through the overlay */
+      background: rgba(0,0,0,0.35);
     }
 
-    header * {
-      position: relative;
-      z-index: 1;
-    }
+    header * {position: relative; z-index: 1;}
+    header h1 {font-size: 2.4em; margin-bottom: 10px;}
+    header p {font-size: 1.2em; margin: 0;}
 
-    header h1 {
-      font-size: 2.4em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      margin: 0;
-    }
-
-    nav {
-      margin-top: 18px;
-    }
-
+    nav {margin-top: 18px;}
     nav a {
-      color: rgba(255,255,255,0.95);
+      color: white;
       text-decoration: none;
-      margin: 0 8px;
+      margin: 0 6px;
       padding: 8px 12px;
       border-radius: 8px;
       background: rgba(0,0,0,0.15);
@@ -106,128 +68,121 @@
     }
 
     section {
-      padding: 40px 20px;
+      padding: 30px 20px;
       background: white;
       border-radius: var(--radius);
       margin-bottom: 24px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     }
 
-    h2 {
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-
-    ul {
-      text-align: left;
-      display: inline-block;
-      margin: 0 auto;
-      padding-left: 20px;
-    }
+    h2 {color: var(--primary); margin-bottom: 18px;}
+    ul {padding-left: 20px; margin: 0;}
+    li {margin-bottom: 8px;}
 
     .button {
       display: inline-block;
       background-color: var(--primary);
       color: white;
-      padding: 12px 26px;
+      padding: 12px 24px;
       text-decoration: none;
       border-radius: 8px;
-      margin-top: 20px;
+      margin-top: 15px;
       font-weight: 600;
       transition: background-color 0.3s, transform 0.12s;
-      outline: none;
     }
-
-    .button:hover {
-      background-color: var(--primary-dark);
-      transform: translateY(-1px);
-    }
-
-    /* Accessible focus style for keyboard users */
-    .button:focus-visible {
-      box-shadow: 0 0 0 4px rgba(0,82,204,0.18);
-    }
+    .button:hover {background-color: var(--primary-dark); transform: translateY(-1px);}
 
     footer {
       background-color: #111;
       color: white;
       text-align: center;
-      padding: 25px;
+      padding: 20px;
       font-size: 14px;
       margin-top: 40px;
     }
 
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8em;
-      }
-      section {
-        padding: 20px 12px;
-      }
-      main {
-        margin-top: -24px;
-        padding: 12px;
-      }
-      nav a{
-        display:inline-block;
-        margin:6px 6px;
-      }
+      header h1 {font-size: 1.8em;}
+      section {padding: 20px 12px;}
+      main {margin-top: -24px; padding: 12px;}
+      nav a {display:inline-block; margin:6px 6px;}
     }
   </style>
 </head>
 <body>
 
-  <a class="skip-link" href="#main">Пропустити до вмісту</a>
+  <header role="banner">
+    <h1>GTI Labz</h1>
+    <p>Сучасне бюро перекладів із поєднанням AI та професійного підходу людини</p>
 
-  <header role="banner" aria-label="Верхній банер сайту">
-    <h1>Бюро перекладів «LinguaPro»</h1>
-    <p>Мости між мовами та культурами — швидко, точно, професійно</p>
-
-    <nav aria-label="Головна навігація">
+    <nav>
       <a href="#about">Про нас</a>
+      <a href="#principles">Наші принципи</a>
       <a href="#services">Послуги</a>
+      <a href="#tech">Наші технології</a>
+      <a href="#clients">Наші клієнти</a>
       <a href="#contacts">Контакти</a>
     </nav>
   </header>
 
-  <main id="main" role="main">
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">Про нас</h2>
-      <p>Ми — команда професійних перекладачів із досвідом роботи понад 10 років. 
-         Забезпечуємо якісний переклад документів, сайтів, технічних текстів і комерційних матеріалів. 
-         Нам довіряють бізнеси, стартапи та приватні клієнти по всій Європі.</p>
+  <main>
+    <section id="about">
+      <h2>Про нас</h2>
+      <p>GTI Translations — сучасне бюро перекладів, яке поєднує технології штучного інтелекту та професійний людський підхід. Ми забезпечуємо точність, швидкість і культурну адаптацію перекладів для бізнесу, державних структур та приватних клієнтів по всьому світу.</p>
     </section>
 
-    <section id="services" aria-labelledby="services-heading">
-      <h2 id="services-heading">Наші послуги</h2>
+    <section id="principles">
+      <h2>Наші принципи</h2>
       <ul>
-        <li>Письмові переклади документів та текстів</li>
-        <li>Усний переклад на зустрічах і конференціях</li>
-        <li>Редагування та коректура перекладів</li>
-        <li>Нотаріальне засвідчення</li>
+        <li><strong>Точність та достовірність:</strong> кожен переклад проходить подвійну перевірку — машинну та експертну, для гарантованої якості.</li>
+        <li><strong>Конфіденційність:</strong> суворе дотримання правил захисту даних і повна безпека інформації клієнтів.</li>
+        <li><strong>Швидкість та ефективність:</strong> використання нейромереж та автоматизації процесів скорочує терміни без втрати якості.</li>
+        <li><strong>Культурна адаптація:</strong> увага до локалізації під культурні особливості цільової аудиторії.</li>
       </ul>
     </section>
 
-    <section id="contacts" aria-labelledby="contacts-heading">
-      <h2 id="contacts-heading">Контакти</h2>
-      <p>📞 <a href="tel:+380671234567" aria-label="Телефон компанії">+38 (067) 123 45 67</a></p>
-      <p>✉️ <a href="mailto:linguapro.office@gmail.com">linguapro.office@gmail.com</a></p>
+    <section id="services">
+      <h2>Послуги</h2>
+      <ul>
+        <li>Письмові переклади (юридичні, технічні, медичні, маркетингові тощо)</li>
+        <li>Машинний переклад із постредагуванням (MTPE)</li>
+        <li>Нотаріальне завірення та апостиль</li>
+        <li>Переклад сайтів та додатків (локалізація)</li>
+        <li>Аудіо- та відеопереклади, субтитри, дубляж</li>
+        <li>Мультимовна верстка та оформлення документів</li>
+      </ul>
+    </section>
 
-      <a href="mailto:linguapro.office@gmail.com" class="button" aria-label="Написати нам електронною поштою">Написати нам</a>
+    <section id="tech">
+      <h2>Наші технології</h2>
+      <p>GTI Translations використовує нейронні мережі, системи управління перекладами (TMS) та інструменти штучного інтелекту для підвищення ефективності. Усі переклади проходять лінгвістичну та стилістичну перевірку професіоналами.</p>
+    </section>
+
+    <section id="clients">
+      <h2>Наші клієнти</h2>
+      <p>Ми працюємо з компаніями зі сфер:</p>
+      <ul>
+        <li>Фінансів та юриспруденції</li>
+        <li>IT та телекомунікацій</li>
+        <li>Медицини та фармацевтики</li>
+        <li>Нерухомості, маркетингу та освіти</li>
+      </ul>
+    </section>
+
+    <section id="contacts">
+      <h2>Контакти</h2>
+      <p>Telegram: <a href="https://t.me/your_username" target="_blank">@your_username</a></p>
+      <p>Email: <a href="mailto:gtilabz@gmail.com">gtilabz@gmail.com</a></p>
+      <a href="mailto:gtilabz@gmail.com" class="button">Замовити переклад</a>
     </section>
   </main>
 
-  <footer role="contentinfo">
-    <p>© <span id="year">2025</span> Бюро перекладів «LinguaPro». Усі права захищено.</p>
+  <footer>
+    <p>© <span id="year">2025</span> GTI Translations. Усі права захищено.</p>
   </footer>
 
   <script>
-    // Динамический год в footer
-    (function(){
-      var y = new Date().getFullYear();
-      var el = document.getElementById('year');
-      if(el) el.textContent = y;
-    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
